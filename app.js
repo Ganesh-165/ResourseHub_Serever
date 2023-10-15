@@ -5,9 +5,11 @@ const {hsc} = require('./Schema.js')
 const {neet} = require('./Schema.js')
 const {jee} = require('./Schema.js')
 const cors = require('cors');
+const { corsOptions } = require('./credentials.js')
+
 
 app.use(express.json())
-app.use(cors())
+app.use(cors(corsOptions));
 
 
 app.post('/sslc',async(req,res) => {
