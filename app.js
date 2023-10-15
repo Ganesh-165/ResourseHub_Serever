@@ -8,7 +8,11 @@ const cors = require('cors');
 const { corsOptions } = require('./credentials.js')
 
 
-app.use(express.json())
+app.use(express.json());
+app.use((req,res,next)=>{
+    res.header('Access-Control-Allow-Credentials', true);
+    next();
+})
 app.use(cors(corsOptions));
 
 
