@@ -4,7 +4,7 @@ exports.credentials = (req, res, next) =>{
     const origin = req.headers.origin;
     console.log(origin);
     if (allowedOrigins.includes(origin)) {
-        res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+        res.header('Access-Control-Allow-Origin', 'https://resorse-hub-client.onrender.com');
         res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
         res.header('Access-Control-Allow-Headers', 'Content-Type');
         res.header('Access-Control-Allow-Credentials', true);
@@ -13,6 +13,6 @@ exports.credentials = (req, res, next) =>{
 }
 
 exports.corsOptions = {
-    origin:'http://localhost:3000',
+    origin:'https://resorse-hub-client.onrender.com',
     optionsSuccessstatus:200
 }
