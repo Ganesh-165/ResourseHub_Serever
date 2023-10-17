@@ -9,8 +9,8 @@ const { corsOptions, credentials } = require('./credentials.js')
 
 
 app.use(express.json());
-// app.use(credentials);
-// app.use(cors(corsOptions));
+app.use(credentials);
+app.use(cors(corsOptions));
 
 app.post('/sslc',async(req,res) => {
     try{
